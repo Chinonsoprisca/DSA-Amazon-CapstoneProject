@@ -77,7 +77,7 @@ This involves identifying data errors and then changing, updating or removing da
 ![Screenshot 2025-07-07 181639](https://github.com/user-attachments/assets/7f1e52a2-1e99-412d-a19e-951d0b45e378)
 
 
-![Screenshot 2025-07-07 181806](https://github.com/user-attachments/assets/ca67ac15-7bf3-4b2c-a1d4-ac07b87f4903)
+![Screenshot 2025-07-07 202418](https://github.com/user-attachments/assets/7cd6e926-9c31-4815-832c-a9d4f43d3a44)
 
 
 
@@ -95,12 +95,16 @@ This involves identifying data errors and then changing, updating or removing da
 
 
 ### Finding and Recommendation
-- Three products Electronics had the highest sales product.
-- West had lowest sales total.
-- Shoes had the highest sales in both sales year and Socks had lowest sales.
-- February is the most productive year in both sales year.
+- Three product category(Electonics, computers/Accessories and Home/Kitchen) have very high rating count and occurrence compared to others.
+- Electronics had the highest sales product and rating count.
+- HomeImprovement has the highest average discount percentage with just two products.
+- More products (1139) have reviews greater than 1000. Only 326 products have reviews less than 1000
+- Greater number (889) of products have discount price above 500.
+- More discounts does not automatically increase sales or review.
 
-- More goods should be supplied to the South since it generates more revenue, this will help to increase sales turnover, more branches can also be established in the South.
-- Different brands of shoes should be supplied to all regions, because customers seem to purchase more of it, and their purchasing interest should be sustained with multi-brand choice.
-- I suggest that more investigation should be carried out on the West store to know the cause of its low sales.
-- it could be that people don't wear Socks much, which causes the sales to be low. If the revenue is not more than the capital, I suggest it should be removed from the stores.**
+
+
+- since 
+ 
+
+  
