@@ -30,7 +30,7 @@ In this project, I am tasked with analysing products and customer review data to
 
 ### Data Source
 ---
-The data used is Lita_Capstone_Dataset (SalesData), which was shared by Ladies In Tech Africa (LITA) through LMS, to be downloaded by her enrolled Data Analysis Students for the Lita_Capstone_Project.
+The data used is Amazon project review data, which was shared by Digital Skillup Africa (DSA)  through LMS, to be downloaded by her enrolled Data Analysis Students for the Lita_Capstone_Project
 
 ### Tools Used
 ---
@@ -39,13 +39,7 @@ The data used is Lita_Capstone_Dataset (SalesData), which was shared by Ladies I
   2. For Analysis
   3. For Visualization
      
-- SQL - Structured Query Language for Querying of Data
 
-- Power BI - Power Business Intelligence for Data Visualization
-
-- Github for
-  1. Portfolio Building
-  2. Project Submission 
 
 ### Data Cleaning and Preparations
 ---
@@ -56,105 +50,52 @@ This involves identifying data errors and then changing, updating or removing da
 
 ### Exploratory Data Analysis
 ---
-- What is the total sales by:
-   1. Product
-   2. Region and
-   3. Month
-- Calculate Metrics such as:
-   1. Average sales per product
-   2. Total revenue by region
-      using Excel formulas
+  1. What is the average discount percentage by product category?
+  2. How many products are listed under each category?
+  3. What is the total number of reviews per category?
+  4. Which products have the highest average ratings?
+  5. What is the average actual price vs the discounted price by category?
+  6. Which products have the highest number of reviews?
+  7. How many products have a discount of 50% or more?
+  8. What is the distribution of product ratings (e.g., how many products are rated 3.0, 4.0, etc.)?
+  9. What is the total potential revenue (actuallprice x rating count) by category?
+  10. What is the number of unique products per price range bucket (e.g., <T200, T200-*500, >E500)?
+  11. How does the rating relate to the level of discount?
+  12. How many products have fewer than 1,000 reviews?
+  13. Which categories have products with the highest discounts?
+  14. Identify the top 5 products in terms of rating and number of reviews combined.
 
 ### Data Analysis
 ---
 
-![Screenshot 2024-11-03 231333](https://github.com/user-attachments/assets/7969f572-3a5e-4919-b970-dad481c712cf)
-
-![Screenshot 2024-11-03 224839](https://github.com/user-attachments/assets/ccebd50d-f171-4da4-948c-8fefb1697206)
-
-![Screenshot 2024-11-03 224744](https://github.com/user-attachments/assets/3998b33f-53b0-4b12-aa97-30776da28bdf)
-
-![Screenshot 2024-11-03 224726](https://github.com/user-attachments/assets/0f080013-7880-45b8-b95c-483ccde05889)
+![Screenshot 2025-07-07 182441](https://github.com/user-attachments/assets/ce7fbba3-da1f-4776-9e5a-6df85b46aaa1)
 
 
-```SQL
+![Screenshot 2025-07-07 183658](https://github.com/user-attachments/assets/4d550584-cf56-428c-88a5-b0b15f1208a1)
 
-CREATE DATABASE LitaProject1
 
-SELECT * FROM [dbo].[ProjectSalesData]
+![Screenshot 2025-07-07 181639](https://github.com/user-attachments/assets/7f1e52a2-1e99-412d-a19e-951d0b45e378)
 
----Retrieve the total sales for each product category-----
-SELECT Product, SUM(Sales) AS SalesPerProduct
-FROM ProjectSalesData 
-GROUP BY Product
-ORDER BY 2 DESC
 
----Find the number of sales transactions in each region-----
-SELECT Region, COUNT(Sales) AS TransactionsPerRegion
-FROM ProjectSalesData 
-GROUP BY Region
+![Screenshot 2025-07-07 181806](https://github.com/user-attachments/assets/ca67ac15-7bf3-4b2c-a1d4-ac07b87f4903)
 
----Find the highest-selling product by total sales value------
-SELECT MAX(Product) AS HighestSellingProduct, SUM(Sales) AS TotalSales
-FROM ProjectSalesData
 
----Calculate total revenue per product----
-SELECT Product, SUM(Sales) AS TotalRevenue
-FROM ProjectSalesData
-GROUP BY Product
 
----Calculate monthly sales totals for the current year-----
-SELECT MONTH(OrderDate) AS Month, SUM(Sales) AS CurrentYearMonthlySales
-FROM ProjectSalesData 
-WHERE
-YEAR(OrderDate) = YEAR(GETDATE())
-GROUP BY MONTH(OrderDate)
-ORDER BY 1 ASC
 
----Find the top 5 customers by total purchase amount----
-SELECT TOP 5 Customer_Id, SUM(Sales) AS TotalPurchaseAmount
-FROM ProjectSalesData
-GROUP BY Customer_Id
-ORDER BY TotalPurchaseAmount DESC
-
----Calculate the percentage of total sales contributed by each region---
-SELECT Region, SUM(Sales) AS TotalSales, 
-(CAST (SUM(Sales) AS FLOAT) /  (SELECT SUM(Sales) FROM ProjectSalesData) * 100) AS TotalSalesPercentage
-FROM ProjectSalesData
-GROUP BY Region
-ORDER BY TotalSalesPercentage DESC  ------------OR----------
-
-SELECT Region, SUM(Sales) AS TotalSales, 
-(SUM(Sales)  * 100.0 /  (SELECT SUM(Sales) FROM ProjectSalesData)) AS TotalSalesPercentage
-FROM ProjectSalesData
-GROUP BY Region
-ORDER BY TotalSalesPercentage DESC
-
----Identify products with no sales in the last quarter------
-SELECT Product FROM [dbo].[ProjectSalesData]
-WHERE
-Product NOT IN(
-    SELECT Product FROM [dbo].[ProjectSalesData]
-    WHERE OrderDate >= DATEADD(qq,DATEDIFF(QUARTER,0,GETDATE())-1,0)
-    AND OrderDate <= DATEADD(qq,DATEDIFF(QUARTER,0,GETDATE()),0)
-    GROUP BY Product
-)
-GROUP BY Product
-```
 
 ### Data Visualization
 ---
 
-![Screenshot 2024-11-03 224816](https://github.com/user-attachments/assets/22e80175-5561-46b2-94fd-228622b87214)
 
-![Screenshot 2024-11-03 224440](https://github.com/user-attachments/assets/2679ebaf-7922-445d-b229-07420d1d0e21)
+![Screenshot 2025-07-07 181949](https://github.com/user-attachments/assets/320e3013-5139-4219-a5be-ef130302c3e6)
 
-![Screenshot 2024-11-03 224609](https://github.com/user-attachments/assets/6b286016-9469-4ff9-b91f-7616275f3045)
 
-![Power BI Visual](https://github.com/user-attachments/assets/2a424d7a-cac5-454c-8fe0-40e6f2578625)
+
+
+
 
 ### Finding and Recommendation
-- South had the highest sales in both sales year (2023 and 2024).
+- Three products Electronics had the highest sales product.
 - West had lowest sales total.
 - Shoes had the highest sales in both sales year and Socks had lowest sales.
 - February is the most productive year in both sales year.
