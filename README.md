@@ -26,7 +26,7 @@ Sales Performance Analysis for a Retail Store
 
 ### Project Overview
 ---
-In this project, I am tasked with analysing sales performance of a retail store. it involves exploring sales data to uncover key insights, such as top-selling products, regional performance, and monthly sales trends. The goal is to produce an interactive Power BI dashboard that highlights these findings. 
+In this project, I am tasked with analysing products and customer review data to generate insights that will guide product improvements, marketing strategy and customer engagement. 
 
 ### Data Source
 ---
