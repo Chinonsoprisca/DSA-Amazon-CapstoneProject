@@ -104,7 +104,8 @@ This involves identifying data errors and then changing, updating or removing da
 
 
 
-- since 
+- The discount rate should be reviewed and reduced where neccerary since it higher discounts does not really increase review rate or sales.
+-   
  
 
   
